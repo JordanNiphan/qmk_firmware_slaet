@@ -26,8 +26,8 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ColemakDHm] = LAYOUT_moonlander(
-    KC_ESCAPE,      KC_1,           KC_2,           KC_3,               KC_4,               KC_5,           TT(_Planetside),                 KC_MS_WH_UP,    KC_MS_BTN3,     KC_MS_BTN2,     KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT, KC_MINUS,
-    KC_TAB,         KC_Q,           KC_W,           KC_F,               KC_P,               KC_B,           TT(_MiscGame),                 KC_MS_BTN1,     KC_J,           KC_L,           KC_U,           KC_Y,               KC_SCLN,        KC_BSLS,
+    KC_ESCAPE,      KC_1,           KC_2,           KC_3,               KC_4,               KC_5,           TT(_Planetside),                KC_MS_WH_UP,    KC_MS_BTN3,     KC_MS_BTN2,     KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT, KC_MINUS,
+    KC_TAB,         KC_Q,           KC_W,           KC_F,               KC_P,               KC_B,           TT(_MiscGame),                  KC_MS_BTN1,     KC_J,           KC_L,           KC_U,           KC_Y,               KC_SCLN,        KC_BSLS,
     KC_MS_BTN2,     KC_A,           KC_R,           KC_S,               KC_T,               KC_G,           KC_TRANSPARENT,                 KC_MS_WH_DOWN,  KC_M,           KC_N,           KC_E,           LT(_Arrows,KC_I),   KC_O,           MT(MOD_RCTL, KC_QUOTE),
     KC_F17,         KC_Z,           KC_X,           KC_C,               KC_D,               KC_V,                                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,             KC_SLASH,       OSM(MOD_RSFT),
     KC_ENTER,       KC_HASH,        KC_SPACE,       KC_MS_WH_DOWN,      KC_MS_WH_UP,                        KC_LEFT_GUI,                    KC_NO,                          KC_RIGHT_ALT,   KC_TRANSPARENT, KC_TRANSPARENT,     KC_TRANSPARENT, KC_TRANSPARENT,
@@ -80,6 +80,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM combo_bspc[] = { KC_N, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_enter[] = { KC_H, KC_COMMA, COMBO_END};
+const uint16_t PROGMEM combo_Lenter[] = { KC_A, KC_R, COMBO_END};
 const uint16_t PROGMEM combo_del[] = { KC_C, KC_D, COMBO_END};
 const uint16_t PROGMEM combo_tab[] = { KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM combo_quote[] = { KC_L, KC_U, COMBO_END};
@@ -90,12 +91,14 @@ const uint16_t PROGMEM combo_Lmouse[] = { KC_T, KC_S, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo_bspc, KC_BSPC),
     COMBO(combo_enter, KC_ENTER),
+    COMBO(combo_Lenter, KC_ENTER),
     COMBO(combo_del, KC_DELETE),
     COMBO(combo_tab, KC_TAB),
     COMBO(combo_quote, KC_QUOTE),
     COMBO(combo_Rmouse, KC_MS_BTN2),
     COMBO(combo_Mmouse, KC_MS_BTN3),
     COMBO(combo_Lmouse, KC_MS_BTN1),
+
 };
 
 tap_dance_action_t tap_dance_actions[] = {
