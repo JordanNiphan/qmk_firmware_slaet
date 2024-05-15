@@ -11,7 +11,6 @@ enum tap_dance {
     Dance_M_U,
     Dance_P_O,
     Dance_Esc_Alt,
-
 };
 
 enum layers {
